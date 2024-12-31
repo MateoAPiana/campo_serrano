@@ -18,6 +18,7 @@ import NavBar from "./header/navBar.astro";
 </html>
 
 <style is:global>
+	@import url("https://fonts.googleapis.com/css2?family=Martel:wght@200;300;400;600;700;800;900&family=Metamorphous&family=Quicksand:wght@300..700&display=swap");
 	body {
 		--darkColor: #118b50;
 		--light: #fbf6e9;
@@ -25,6 +26,13 @@ import NavBar from "./header/navBar.astro";
 		--second-color: #e3f0af;
 		min-height: 100dvh;
 		background-color: var(--light);
+		font-family: Metamorphous;
+	}
+	h1 {
+		font-family: Martel;
+	}
+	h2 {
+		font-family: Quicksand;
 	}
 	*,
 	::after,
