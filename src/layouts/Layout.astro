@@ -1,3 +1,7 @@
+---
+import NavBar from "./header/navBar.astro";
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -8,15 +12,20 @@
 		<title>Campo serrano</title>
 	</head>
 	<body>
+		<NavBar />
 		<slot />
 	</body>
 </html>
 
-<style>
-	html,
+<style is:global>
 	body {
+		min-width: 100dvw;
+		min-height: 100dvh;
+	}
+	*,
+	::after,
+	::before {
 		margin: 0;
-		width: 100%;
-		height: 100%;
+		padding: 0;
 	}
 </style>
