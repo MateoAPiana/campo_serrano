@@ -1,0 +1,25 @@
+.main_home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  margin: 25px;
+}
+
+.products {
+  display: flex;
+  gap: 20px;
+}
+
+.box__product {
+  width: 20dvw;
+  height: 20dvw;
+  background-color: var(--second-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
