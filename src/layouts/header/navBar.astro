@@ -2,14 +2,22 @@
 
 ---
 
-<nav>
+<nav class="navBar">
   <div id="icon"></div>
-  <ul>
+  <ul class="nav-list">
     <li class="nav-item">Home</li>
     <li class="nav-item">Reservation</li>
     <li class="nav-item">Contact</li>
   </ul>
   <style>
+    .navBar {
+      background-color: var(--main-color);
+      min-height: 10dvh;
+    }
+    .nav-list {
+      display: flex;
+      flex-direction: row;
+    }
     .nav-item {
       list-style: none;
       padding: 10px;
