@@ -1,9 +1,7 @@
----
-
----
-
 <nav class="navBar">
-  <div id="icon"></div>
+  <div class="icon">
+    <img src="/icon.png" alt="" />
+  </div>
   <ul class="nav-list">
     <li class="nav-item"><a href="#home">Home</a></li>
     <li class="nav-item"><a href="#reservation">Reservation</a></li>
@@ -11,12 +9,18 @@
   </ul>
   <style>
     .navBar {
-      background-color: var(--main-color);
+      display: flex;
+      background: linear-gradient(90deg, #7fe7bf, #25b67e);
       min-height: 10dvh;
     }
+    .icon img {
+      height: 100px;
+    }
     .nav-list {
+      min-width: calc(100% - 125px);
       display: flex;
-      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
     }
     .nav-item {
       list-style: none;
