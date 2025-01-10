@@ -6,8 +6,17 @@
   align-items: center;
 }
 
-.email {
+.email,
+.instagram {
   display: flex;
+}
+
+.email img {
+  width: 25px;
+}
+
+.instagram img {
+  width: 31px;
 }
 
 .info {
