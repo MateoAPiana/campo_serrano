@@ -20,11 +20,32 @@ h1 {
 .box__product {
   width: 20dvw;
   height: 20dvw;
-  background-color: var(--second-color);
+  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.box__product a {
+  color: #fff;
+  text-decoration: none;
+  font-family: inherit;
+  padding: 8px;
+  background-color: #0008;
+  border-radius: 5px;
+}
+
+.product_gastronomic {
+  background-image: url("/gastronomíamock.png");
+}
+
+.product_party {
+  background-image: url("/fiestamock.png");
+}
+
+.product_others {
+  background-image: url("/othersmock.png");
 }
 
 #videoHome {
