@@ -48,13 +48,46 @@ h1 {
   background-image: url("/othersmock.png");
 }
 
+.video__wrapper {
+  width: 100dvw;
+  background-color: color-mix(in srgb-linear, var(--main-color) 75%, #fff 25%);
+}
+
 #videoHome {
-  height: 66dvh;
-  width: 98dvw;
+  width: 100dvw;
+  height: 100dvh;
   margin: 10px;
+  margin-top: 0;
+}
+
+.about {
+  padding-top: 80px;
+}
+
+.arrow {
+  position: absolute;
+  padding: 6px;
+  background-color: var(--light);
+  bottom: 10px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  text-decoration: none;
+  color: inherit;
+  animation: oscillate .6s alternate both infinite;
 }
 
 .textHome {
   margin: 10px 60px;
   text-align: center;
+}
+
+@keyframes oscillate {
+  from {
+    bottom: 10px;
+  }
+
+  to {
+    bottom: 20px;
+  }
 }
