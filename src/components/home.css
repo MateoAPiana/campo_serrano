@@ -14,7 +14,7 @@ h1 {
 
 .products {
   display: flex;
-  height: 70dvh;
+  height: 55dvh;
   gap: 50px;
 }
 
@@ -68,7 +68,7 @@ h1 {
 }
 
 .about {
-  height: 30dvh;
+  height: 45dvh;
 }
 
 .about h2 {
