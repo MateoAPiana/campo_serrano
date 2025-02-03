@@ -13,6 +13,7 @@ import NavBar from "./components/navBar.astro";
 		<title>Campo serrano</title>
 	</head>
 	<body>
+		<div class="space"></div>
 		<NavBar />
 		<slot />
 		<Footer />
@@ -33,6 +34,10 @@ import NavBar from "./components/navBar.astro";
 		max-width: 100dvw;
 		background-color: var(--light);
 		font-family: Metamorphous;
+	}
+	.space {
+		width: 100dvw;
+		height: 15dvh;
 	}
 	h1 {
 		font-family: Martel;
