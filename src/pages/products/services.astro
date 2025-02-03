@@ -3,5 +3,58 @@ import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout>
-  <h1>Services</h1>
+  <section class="main_wrapper">
+    <main class="services">
+      <h1 class="title">Services</h1>
+      <div class="content">
+        <div class="text">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus
+            odit recusandae rem, quasi iste fugit, consequuntur aliquid
+            excepturi magnam harum quos quod sit enim nam? Voluptatibus
+            consectetur quaerat itaque quo.
+          </p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus
+            odit recusandae rem, quasi iste fugit, consequuntur aliquid
+            excepturi magnam harum quos quod sit enim nam? Voluptatibus
+            consectetur quaerat itaque quo.
+          </p>
+        </div>
+        <img
+          id="service_img"
+          src="/gastronomíamock.png"
+          alt="image of our gastronomic service"
+        />
+      </div>
+    </main>
+  </section>
+  <style>
+    .main_wrapper {
+      width: 100dvw;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      margin: 10px;
+    }
+
+    .services {
+      width: 80dvw;
+    }
+
+    .title {
+      font-size: 28px;
+      text-align: center;
+    }
+
+    .content {
+      display: flex;
+      margin: 20px;
+      gap: 10px;
+    }
+
+    #service_img {
+      max-height: 50dvh;
+    }
+  </style>
 </Layout>

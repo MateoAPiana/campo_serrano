@@ -15,7 +15,9 @@ import NavBar from "./components/navBar.astro";
 	<body>
 		<div class="space"></div>
 		<NavBar />
-		<slot />
+		<section class="page">
+			<slot />
+		</section>
 		<Footer />
 	</body>
 </html>
@@ -34,11 +36,18 @@ import NavBar from "./components/navBar.astro";
 		max-width: 100dvw;
 		background-color: var(--light);
 		font-family: Metamorphous;
+		display: flex;
+		flex-direction: column;
 	}
 	.space {
 		width: 100dvw;
 		height: 15dvh;
 	}
+
+	.page {
+		flex: 1;
+	}
+
 	h1 {
 		font-family: Martel;
 	}
