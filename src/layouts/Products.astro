@@ -1,0 +1,44 @@
+---
+const { product, img } = Astro.props;
+---
+
+<section class="main_wrapper">
+  <main class="productContainer">
+    <h1 class="title">{product}</h1>
+    <section class="content">
+      <div class="text">
+        <slot />
+      </div>
+      <img class="image" src={img} alt={`image of our ${product} service`} />
+    </section>
+    <style>
+      .main_wrapper {
+        width: 100dvw;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin: 10px;
+      }
+
+      .productContainer {
+        width: 80dvw;
+      }
+
+      .title {
+        text-transform: capitalize;
+        font-size: 28px;
+        text-align: center;
+      }
+
+      .content {
+        display: flex;
+        margin: 20px;
+        gap: 10px;
+      }
+
+      .image {
+        max-height: 50dvh;
+      }
+    </style>
+  </main>
+</section>
