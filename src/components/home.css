@@ -69,6 +69,18 @@ h1 {
 
 .about {
   height: 45dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content_about {
+  position: relative;
+  top: -10%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .about h2 {
