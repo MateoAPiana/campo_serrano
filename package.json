@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "@types/node": "^22.10.2",
-    "astro": "^5.0.5"
+    "astro": "^5.0.5",
+    "resend": "^4.1.2"
   },
   "devDependencies": {
     "oxlint": "^0.15.2"

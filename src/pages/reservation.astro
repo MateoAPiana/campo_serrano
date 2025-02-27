@@ -1,0 +1,17 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <h1>Reservation</h1>
+  <button id="sendEmail">Send Email</button>
+  <script>
+    import { sendEmail } from "../../utils/email.js";
+    const btn = document.getElementById("sendEmail");
+    btn?.addEventListener("click", async () => {
+      const res = await sendEmail("mateoapiana@gmail.com", "hello");
+      if (res.ok) {
+      }
+    });
+  </script>
+</Layout>
