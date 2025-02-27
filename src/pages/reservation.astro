@@ -3,15 +3,81 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <h1>Reservation</h1>
-  <button id="sendEmail">Send Email</button>
+  <main class="reservation_page">
+    <h1>Reservation</h1>
+    <form action="post">
+      <label for="email_form">Your email:</label>
+      <input type="email" name="email" id="email_form" required />
+      <div id="calendar"></div>
+      <input type="submit" name="submit_form" id="submit_form" value="Submit" />
+    </form>
+  </main>
   <script>
     import { sendEmail } from "../../utils/email.js";
-    const btn = document.getElementById("sendEmail");
-    btn?.addEventListener("click", async () => {
-      const res = await sendEmail("mateoapiana@gmail.com", "hello");
+
+    import "vanilla-calendar-pro/styles/index.css";
+    import { Calendar, type Options } from "vanilla-calendar-pro";
+
+    let day = "";
+
+    const options: Options = {
+      onClickDate(self) {
+        day = self.context.selectedDates as unknown as string;
+      },
+      selectedTheme: "light",
+    };
+
+    const calendar = new Calendar("#calendar", options);
+
+    calendar.init();
+
+    const btn = document.getElementById("submit_form");
+    const email: HTMLInputElement | null = document.getElementById(
+      "email_form",
+    ) as HTMLInputElement;
+
+    btn?.addEventListener("click", async (e) => {
+      e.preventDefault();
+      const res = await sendEmail(email?.value, day[0]);
       if (res.ok) {
       }
     });
   </script>
+  <style>
+    .reservation_page {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+    .reservation_page form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    #email_form {
+      padding: 4px;
+      font-family: inherit;
+      border: 1px solid #000;
+      border-radius: 8px;
+    }
+    #calendar {
+      max-width: 70px;
+      box-shadow: 10px 5px 5px #0003;
+    }
+
+    #submit_form {
+      padding: 8px;
+      font-family: inherit;
+      background-color: #fff;
+      border: 1px solid #000;
+      border-radius: 8px;
+    }
+
+    #submit_form:hover {
+      cursor: pointer;
+    }
+  </style>
 </Layout>

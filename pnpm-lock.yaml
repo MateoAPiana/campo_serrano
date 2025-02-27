@@ -17,6 +17,9 @@ importers:
       resend:
         specifier: ^4.1.2
         version: 4.1.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      vanilla-calendar-pro:
+        specifier: ^3.0.3
+        version: 3.0.3
     devDependencies:
       oxlint:
         specifier: ^0.15.2
@@ -1626,6 +1629,9 @@ packages:
 
   unist-util-visit@5.0.0:
     resolution: {integrity: sha512-MR04uvD+07cwl/yhVuVWAtw+3GOR/knlL55Nd/wAdblk27GCVt3lqpTivy/tkJcZoNPzTwS1Y+KMojlLDhoTzg==}
+
+  vanilla-calendar-pro@3.0.3:
+    resolution: {integrity: sha512-bfmeGFaDeakk/OrwgM+22qDiRvIx1Zu+GG3+E/sCPjaKwbJR7AsDyRBfJQzVHRw3eeavU8jQQTRSFt8EPIPOGw==}
 
   vfile-location@5.0.3:
     resolution: {integrity: sha512-5yXvWDEgqeiYiBe1lbxYF7UMAIm/IcopxMHrMQDq3nvKcjPKIhZklUKL+AE7J7uApI4kwe2snsK+eI6UTj9EHg==}
@@ -3578,6 +3584,8 @@ snapshots:
       '@types/unist': 3.0.3
       unist-util-is: 6.0.0
       unist-util-visit-parents: 6.0.1
+
+  vanilla-calendar-pro@3.0.3: {}
 
   vfile-location@5.0.3:
     dependencies:
