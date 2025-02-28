@@ -17,14 +17,21 @@ import Layout from "../layouts/Layout.astro";
 
     import "vanilla-calendar-pro/styles/index.css";
     import { Calendar, type Options } from "vanilla-calendar-pro";
-
     let day = "";
+    let time = "";
 
     const options: Options = {
       onClickDate(self) {
         day = self.context.selectedDates as unknown as string;
       },
+      onChangeTime(self) {
+        time = (self.context.selectedHours +
+          " : " +
+          self.context.selectedMinutes) as unknown as string;
+      },
       selectedTheme: "light",
+      selectionTimeMode: 12,
+      dateMin: "today",
     };
 
     const calendar = new Calendar("#calendar", options);
@@ -38,7 +45,8 @@ import Layout from "../layouts/Layout.astro";
 
     btn?.addEventListener("click", async (e) => {
       e.preventDefault();
-      const res = await sendEmail(email?.value, day[0]);
+      if (!email?.value) throw new Error("The email is required");
+      const res = await sendEmail(email?.value, day[0] + " " + time);
       if (res.ok) {
       }
     });
@@ -46,6 +54,7 @@ import Layout from "../layouts/Layout.astro";
   <style>
     .reservation_page {
       width: 100%;
+      padding: 20px;
       display: flex;
       flex-direction: column;
       justify-content: center;
