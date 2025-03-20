@@ -1,0 +1,14 @@
+---
+const { title } = Astro.props;
+import "./ServiceCard.css";
+---
+
+<!--! Delete the mock -->
+<a href={`/products/service/${title}`} class="ServiceCard__wrapper">
+  <div
+    style={{ backgroundImage: `url("/public/${title}mock.png");` }}
+    class="ServiceCard"
+  >
+  </div>
+  <h2 class="title">{title}</h2>
+</a>

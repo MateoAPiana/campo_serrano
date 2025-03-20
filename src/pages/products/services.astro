@@ -1,22 +1,19 @@
 ---
+import ServiceCard from "../../components/ServiceCard.astro";
 import Layout from "../../layouts/Layout.astro";
-import Products from "../../layouts/Products.astro";
 ---
 
 <Layout>
-  <Products product="party" img="/gastronomíamock.png">
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima atque
-      ratione inventore repellat eos tempora cumque repellendus, beatae libero
-      eum dolore laudantium alias hic harum odit omnis. Eligendi, exercitationem
-      quasi!
-    </p>
-    <br />
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima atque
-      ratione inventore repellat eos tempora cumque repellendus, beatae libero
-      eum dolore laudantium alias hic harum odit omnis. Eligendi, exercitationem
-      quasi!
-    </p>
-  </Products>
+  <main>
+    <ServiceCard title="walks" />
+    <ServiceCard title="gastronomy" />
+  </main>
+  <style>
+    main {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 100%;
+    }
+  </style>
 </Layout>
