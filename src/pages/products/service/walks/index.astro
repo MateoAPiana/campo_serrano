@@ -1,5 +1,6 @@
 ---
-import Layout from "../../../layouts/Layout.astro";
+import Layout from "@layouts/Layout.astro";
+
 import "./walks.css";
 const productsWalks = [
   "crops",
@@ -17,7 +18,7 @@ const productsWalks = [
       productsWalks.map((p) => {
         return (
           <a
-            href={`/products/service/${p}`}
+            href={`/products/service/walks/description/?page=${p}`}
             style={{ "background-image": `url('/service/${p}.png')` }}
             class="walks__item"
           >
