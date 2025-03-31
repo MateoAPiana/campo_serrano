@@ -1,0 +1,12 @@
+---
+import DescriptionNav from "./components/DescriptionNav.astro";
+import Layout from "./Layout.astro";
+const { title } = Astro.props;
+---
+
+<Layout>
+  <main class="DescriptionClient">
+    <h1 class="DescriptionClient__title">{title}</h1>
+  </main>
+  <DescriptionNav />
+</Layout>

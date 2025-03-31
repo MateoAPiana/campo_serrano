@@ -1,0 +1,18 @@
+---
+import type { GetStaticPaths } from "astro";
+import Description from "@layouts/Description.astro";
+import { productsWalks } from "@pages/products/service/walks/productsWalks";
+
+export const getStaticPaths = (() => {
+  const paths = productsWalks.map((product) => {
+    return {
+      params: { service: product },
+    };
+  });
+  return paths;
+}) satisfies GetStaticPaths;
+
+const { service } = Astro.params;
+---
+
+<Description title={service} />

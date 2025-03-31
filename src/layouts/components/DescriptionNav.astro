@@ -1,0 +1,22 @@
+---
+import { productsWalks } from "@pages/products/service/walks/productsWalks";
+import "./DescriptionNav.css";
+---
+
+<nav class="nav">
+  <h2 class="nav__title">Walks</h2>
+  <ul class="nav__list">
+    {
+      productsWalks.map((walk, index) => (
+        <li>
+          <a
+            class="nav__item"
+            href={`/products/service/walks/descriptions/${walk}`}
+          >
+            {walk}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
